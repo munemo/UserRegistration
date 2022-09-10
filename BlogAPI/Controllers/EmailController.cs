@@ -23,5 +23,7 @@ namespace BlogAPI.Controllers
             _emailService.SendEmail(request);
             return Ok();
         }
+
+
     }
 }

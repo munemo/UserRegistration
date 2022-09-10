@@ -8,9 +8,11 @@ namespace BlogAPI.Services.EmailService
     public class EmailService : IEmailService
     {
         private readonly IConfiguration _config;
+       
         public EmailService(IConfiguration config)
         {
-            this._config = config;
+            _config = config;
+          
         }
         public void SendEmail(EmailDto request)
         {
@@ -29,5 +31,6 @@ namespace BlogAPI.Services.EmailService
             smtp.Disconnect(true);
 
         }
+     
     }
 }
